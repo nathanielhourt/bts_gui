@@ -38,9 +38,8 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.right: parent.right
 
-            Label {
-                anchors.centerIn: parent
-                text: "Balance Info"
+            BalanceDisplay {
+                anchors.fill: parent
             }
         }
     }
