@@ -47,14 +47,14 @@ Rectangle {
         Label {
             id: orderType
             font.pointSize: 12
-            color: palette.text
+            color: globalPalette.text
             text: qsTr(type)
         }
         
         Label {
             id: orderDescription
             width: parent.width
-            color: palette.text
+            color: globalPalette.text
             wrapMode: Text.Wrap
             text: baseAmount + " " + baseUnit + qsTr(" for ") + quoteAmount + " " + quoteUnit
         }
@@ -86,7 +86,7 @@ Rectangle {
 
             PropertyChanges {
                 target: container
-                color: palette.highlight
+                color: globalPalette.highlight
                 height: orderInformationColumn.height + orderOptionsContainer.height + 5
             }
             PropertyChanges {
@@ -95,11 +95,11 @@ Rectangle {
             }
             PropertyChanges {
                 target: orderType
-                color: palette.highlightedText
+                color: globalPalette.highlightedText
             }
             PropertyChanges {
                 target: orderDescription
-                color: palette.highlightedText
+                color: globalPalette.highlightedText
             }
         }
 

@@ -7,11 +7,12 @@ import io.Invictus.BitsharesX 1.0
 ApplicationWindow {
     width: 1000
     height: 600
-    color: palette.window
-    title: qsTr("BitsharesX")
+    minimumHeight: 500
+    color: globalPalette.window
+    title: qsTr("Bitshares XT")
 
     SystemPalette {
-        id: palette
+        id: globalPalette
         colorGroup: SystemPalette.Active
     }
     MarketModel {
@@ -23,6 +24,7 @@ ApplicationWindow {
 
         Item {
             Layout.fillHeight: true
+            Layout.minimumHeight: 200
             anchors.left: parent.left
             anchors.right: parent.right
 

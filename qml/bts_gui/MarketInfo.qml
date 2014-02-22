@@ -24,13 +24,15 @@ GroupBox {
 
         OrderPlacementOptions {
             id: orderPlacementOptions
-            Layout.minimumHeight: 200
+            Layout.minimumHeight: 100
+            Layout.preferredHeight: 200
             anchors.left: parent.left
             anchors.right: parent.right
         }
 
         Row {
-            Layout.minimumHeight: 200
+            Layout.minimumHeight: 100
+            Layout.preferredHeight: 200
             Layout.fillHeight: true
             anchors.left: parent.left
             anchors.right: parent.right
