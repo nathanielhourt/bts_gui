@@ -22,12 +22,28 @@ GroupBox {
             bottom: parent.bottom
         }
 
-        OrderPlacementOptions {
-            id: orderPlacementOptions
+        RowLayout {
             Layout.minimumHeight: 100
             Layout.preferredHeight: 200
-            anchors.left: parent.left
-            anchors.right: parent.right
+            Layout.fillWidth: true
+            width: parent.width
+
+            OrderPlacementOptions {
+                id: orderPlacementOptions
+                Layout.fillHeight: true
+                Layout.minimumWidth: 335
+            }
+
+            Rectangle {
+                color: "white"
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                Label {
+                    anchors.centerIn: parent
+                    text: "Chart Goes Here"
+                }
+            }
         }
 
         Row {
