@@ -70,14 +70,14 @@ Row {
     OrderTable {
         id: marketBidList
         height: parent.height
-        width: 300
+        width: parent.width/2
         model: dummyModel
         label: "Market Bids"
     }
     OrderTable {
         id: marketAskList
         height: parent.height
-        width: 300
+        width: parent.width/2
         model: dummyModel
         label: "Market Asks"
     }

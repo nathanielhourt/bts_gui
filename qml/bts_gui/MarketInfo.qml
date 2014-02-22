@@ -13,7 +13,7 @@ GroupBox {
         anchors.left: parent.left
     }
 
-    ColumnLayout {
+    GridLayout {
         anchors {
             top: marketStateHeader.bottom
             topMargin: 5
@@ -21,51 +21,35 @@ GroupBox {
             right: parent.right
             bottom: parent.bottom
         }
+        columns: 2
 
-        RowLayout {
-            Layout.minimumHeight: 100
-            Layout.preferredHeight: 200
-            Layout.fillWidth: true
-            width: parent.width
-
-            OrderPlacementOptions {
-                id: orderPlacementOptions
-                Layout.fillHeight: true
-                Layout.minimumWidth: 335
-            }
-
-            Rectangle {
-                color: "white"
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                Label {
-                    anchors.centerIn: parent
-                    text: "Chart Goes Here"
-                }
-            }
-        }
-
-        Row {
-            Layout.minimumHeight: 100
-            Layout.preferredHeight: 200
+        OrderPlacementOptions {
+            id: orderPlacementOptions
+            Layout.minimumWidth: 335
+            Layout.minimumHeight: 200
             Layout.fillHeight: true
-            anchors.left: parent.left
-            anchors.right: parent.right
-            spacing: 30
-
-            OrderList {
-                id: localOrderList
-                height: parent.height
-                width: Math.max(parent.width / 3.5, implicitWidth)
-            }
-
-            OrderBooks {
-                id: marketBidList
-                height: parent.height
-                spacing: parent.spacing
-            }
-
         }
+        Rectangle {
+            color: "white"
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            Label {
+                anchors.centerIn: parent
+                text: "Chart Goes Here"
+            }
+        }
+
+        OrderList {
+            id: localOrderList
+            Layout.minimumHeight: 200
+            Layout.preferredWidth: orderPlacementOptions.width
+        }
+        OrderBooks {
+            id: marketBidList
+            Layout.minimumHeight: localOrderList.height
+            Layout.fillWidth: true
+        }
+
     }
 }

@@ -7,7 +7,8 @@ import io.Invictus.BitsharesX 1.0
 ApplicationWindow {
     width: 1000
     height: 600
-    minimumHeight: 500
+    minimumHeight: 600
+    minimumWidth: minimumHeight
     color: globalPalette.window
     title: qsTr("Bitshares XT")
 
