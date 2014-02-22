@@ -17,7 +17,7 @@ TabView {
                     fill: parent
                     margins: 20
                 }
-                columns: 4
+                columns: 3
                 
                 Label {
                     text: qsTr("Buy")
@@ -25,13 +25,13 @@ TabView {
                 TextField {
                     id: buyAmount
                     Layout.preferredWidth: 150
+                    Layout.fillWidth: true
                     inputMethodHints: Qt.ImhFormattedNumbersOnly
                     validator: DoubleValidator{bottom: 0}
                 }
                 Label {
                     text: globalMarketModel.quoteUnitName
                 }
-                Item {Layout.fillWidth: true}
                 
                 Label {
                     text: qsTr("Price")
@@ -39,13 +39,13 @@ TabView {
                 TextField {
                     id: buyPrice
                     Layout.preferredWidth: 150
+                    Layout.fillWidth: true
                     inputMethodHints: Qt.ImhFormattedNumbersOnly
                     validator: DoubleValidator{bottom: 0}
                 }
                 Label {
                     text: globalMarketModel.quoteUnitName + qsTr(" per ") + globalMarketModel.baseUnitName
                 }
-                Item {Layout.fillWidth: true}
                 
                 Label {
                     text: qsTr("Total")

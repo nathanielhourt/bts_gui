@@ -25,7 +25,7 @@ GroupBox {
 
         OrderPlacementOptions {
             id: orderPlacementOptions
-            Layout.minimumWidth: 335
+            Layout.minimumWidth: 250
             Layout.minimumHeight: 200
             Layout.fillHeight: true
         }
@@ -42,7 +42,7 @@ GroupBox {
 
         OrderList {
             id: localOrderList
-            Layout.minimumHeight: 200
+            Layout.minimumHeight: 175
             Layout.preferredWidth: orderPlacementOptions.width
         }
         OrderBooks {
