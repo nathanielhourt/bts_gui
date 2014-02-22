@@ -19,6 +19,9 @@ ApplicationWindow {
     MarketModel {
         id: globalMarketModel
     }
+    WalletModel {
+        id: globalWalletModel
+    }
 
     ColumnLayout {
         anchors.fill: parent

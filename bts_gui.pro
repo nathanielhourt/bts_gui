@@ -10,7 +10,8 @@ CONFIG += c++11
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
-    marketmodel.cpp
+    marketmodel.cpp \
+    walletmodel.cpp
 
 # Installation path
 # target.path =
@@ -20,4 +21,5 @@ include(qtquick2controlsapplicationviewer/qtquick2controlsapplicationviewer.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    marketmodel.hpp
+    marketmodel.hpp \
+    walletmodel.hpp

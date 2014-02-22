@@ -1,5 +1,6 @@
 #include "marketmodel.hpp"
 #include "qtquick2controlsapplicationviewer.h"
+#include "walletmodel.hpp"
 
 #include <QtQml>
 
@@ -9,6 +10,7 @@ int main(int argc, char *argv[])
     QtQuick2ControlsApplicationViewer viewer;
 
     qmlRegisterType<MarketModel>("io.Invictus.BitsharesX", 1, 0, "MarketModel");
+    qmlRegisterType<WalletModel>("io.Invictus.BitsharesX", 1, 0, "WalletModel");
 
     viewer.setMainQmlFile(QStringLiteral("qml/bts_gui/main.qml"));
     viewer.show();

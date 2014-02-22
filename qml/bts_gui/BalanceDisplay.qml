@@ -18,21 +18,32 @@ RowLayout {
         Label {
             id: quoteBalanceLabel
             font.pointSize: 16
-            text: "1.5 " + globalMarketModel.quoteUnitName
+            text: globalWalletModel.balance[globalMarketModel.quoteUnit].toFixed(2) + " " + globalMarketModel.quoteUnitName
         }
 
         Label {
             id: baseBalanceLabel
             font.pointSize: 16
-            text: "8.2 " + globalMarketModel.baseUnitName
+            text: globalWalletModel.balance[globalMarketModel.baseUnit].toFixed(2) + " " + globalMarketModel.baseUnitName
         }
     }
 
     Item {
         Layout.fillWidth: true
-        Label {
+        Layout.fillHeight: true
+
+        Row {
             anchors.centerIn: parent
-            text: "Other balances"
+            spacing: 30
+
+            Repeater {
+                model: globalMarketModel.assetNames.length
+                delegate: Label {
+                    font.pointSize: 13
+                    text: globalMarketModel.assetNames[index] + ": " + globalWalletModel.balance[index].toFixed(2)
+                    visible: index !== globalMarketModel.baseUnit && index !== globalMarketModel.quoteUnit
+                }
+            }
         }
     }
 
