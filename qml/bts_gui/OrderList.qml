@@ -35,33 +35,33 @@ Item {
                         quoteAmount: "90.00"
                         quoteUnit: "USD"
                         baseAmount: "1.00"
-                        baseUnit: "BTS"
+                        baseUnit: "XTS"
                     }
                     ListElement {
                         type: "Bid"
                         quoteAmount: "90.00"
                         quoteUnit: "USD"
                         baseAmount: "1.00"
-                        baseUnit: "BTS"
+                        baseUnit: "XTS"
                     }
                     ListElement {
                         type: "Ask"
                         quoteAmount: "1.0"
-                        quoteUnit: "BTS"
+                        quoteUnit: "XTS"
                         baseAmount: "1.0"
                         baseUnit: "PTS"
                     }
                     ListElement {
                         type: "Ask"
                         quoteAmount: "1.0"
-                        quoteUnit: "BTS"
+                        quoteUnit: "XTS"
                         baseAmount: "1.0"
                         baseUnit: "PTS"
                     }
                     ListElement {
                         type: "Short"
                         quoteAmount: "1.0"
-                        quoteUnit: "BTS"
+                        quoteUnit: "XTS"
                         baseAmount: "1.000000000003"
                         baseUnit: "PTS"
                     }

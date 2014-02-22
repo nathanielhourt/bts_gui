@@ -7,61 +7,61 @@ Row {
         id: dummyModel
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
         ListElement {
             quote_amount: "1000.00 USD"
-            base_amount: "9.00 BTS"
+            base_amount: "9.00 XTS"
             type: "Bid"
             status: "Open"
         }
