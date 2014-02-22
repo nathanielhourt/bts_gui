@@ -36,7 +36,7 @@ GroupBox {
 
             Label {
                 anchors.centerIn: parent
-                text: "Chart Goes Here"
+                text: "Price History Chart Goes Here"
             }
         }
 
