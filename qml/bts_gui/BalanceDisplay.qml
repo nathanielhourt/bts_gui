@@ -61,6 +61,11 @@ RowLayout {
             id: transferButton
             text: qsTr("Transfer Assets")
             width: parent.width
+            onClicked: transferWindow.show()
+
+            TransferWindow {
+                id: transferWindow
+            }
         }
     }
 

@@ -23,3 +23,6 @@ qtcAddDeployment()
 HEADERS += \
     marketmodel.hpp \
     walletmodel.hpp
+
+OTHER_FILES += \
+    qml/bts_gui/TransferWindow.qml
