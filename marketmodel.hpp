@@ -16,7 +16,7 @@ class MarketModel : public QObject
     Q_PROPERTY(QStringList assetNames READ assetNames NOTIFY assetNamesChanged)
 
 public:
-    enum AssetType {XTS, BTC, USD, GLD, SLV, CNY, AssetTypeCount};
+    enum AssetType {BTS, BTC, USD, GLD, SLV, CNY, AssetTypeCount};
     Q_ENUMS(AssetType)
     const static QStringList ASSET_NAMES;
 

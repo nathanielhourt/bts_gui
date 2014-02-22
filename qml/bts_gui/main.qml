@@ -10,7 +10,7 @@ ApplicationWindow {
     minimumHeight: 600
     minimumWidth: minimumHeight
     color: globalPalette.window
-    title: qsTr("Bitshares XT")
+    title: qsTr("Bitshares X")
 
     SystemPalette {
         id: globalPalette

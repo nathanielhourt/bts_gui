@@ -46,6 +46,6 @@ RowLayout {
         width: 10
     }
     Label {
-        text: qsTr("Volume: 15024 XTS")
+        text: qsTr("Volume: 15024 BTS")
     }
 }
