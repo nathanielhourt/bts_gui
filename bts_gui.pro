@@ -25,4 +25,5 @@ HEADERS += \
     walletmodel.hpp
 
 OTHER_FILES += \
-    qml/bts_gui/TransferWindow.qml
+    qml/bts_gui/TransferWindow.qml \
+    qml/bts_gui/OrderPlacementTabView.qml

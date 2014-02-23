@@ -23,8 +23,8 @@ GroupBox {
         }
         columns: 2
 
-        OrderPlacementOptions {
-            id: orderPlacementOptions
+        OrderPlacementTabView {
+            id: orderPlacementView
             Layout.minimumWidth: 250
             Layout.minimumHeight: 200
             Layout.fillHeight: true
@@ -43,7 +43,7 @@ GroupBox {
         OrderList {
             id: localOrderList
             Layout.minimumHeight: 175
-            Layout.preferredWidth: orderPlacementOptions.width
+            Layout.preferredWidth: orderPlacementView.width
         }
         OrderBooks {
             id: marketBidList
