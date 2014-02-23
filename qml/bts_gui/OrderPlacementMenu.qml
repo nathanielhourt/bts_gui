@@ -17,7 +17,7 @@ Tab {
                 margins: 20
             }
             columns: 3
-            
+
             Label {
                 text: orderTab.title
             }
@@ -31,7 +31,7 @@ Tab {
             Label {
                 text: globalMarketModel.quoteUnitName
             }
-            
+
             Label {
                 text: qsTr("Price")
             }
@@ -43,15 +43,15 @@ Tab {
                 validator: DoubleValidator{bottom: 0}
             }
             Label {
-                text: globalMarketModel.quoteUnitName + qsTr(" per ") + globalMarketModel.baseUnitName
+                text: globalMarketModel.baseUnitName + qsTr(" per ") + globalMarketModel.quoteUnitName
             }
-            
+
             Label {
                 text: qsTr("Total")
             }
             Label {
                 id: totalLabel
-                property real total: parseFloat(orderAmount.text) / parseFloat(orderPrice.text)
+                property real total: parseFloat(orderAmount.text) * parseFloat(orderPrice.text)
                 text: isNaN(total)? '' : total.toFixed(2) + " " + globalMarketModel.baseUnitName
             }
             Button {
