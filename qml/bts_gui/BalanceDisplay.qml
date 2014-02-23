@@ -3,6 +3,7 @@ import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
 import io.Invictus.BitsharesX 1.0
+import "Transfers"
 
 RowLayout {
     spacing: 20
