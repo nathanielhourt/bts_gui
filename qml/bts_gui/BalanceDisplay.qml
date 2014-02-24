@@ -38,10 +38,10 @@ RowLayout {
             spacing: 30
 
             Repeater {
-                model: globalMarketModel.assetNames.length
+                model: MarketModel.AssetTypeCount
                 delegate: Label {
                     font.pointSize: 13
-                    text: globalMarketModel.assetNames[index] + ": " + globalWalletModel.balance[index].toFixed(2)
+                    text: globalMarketModel.assetName(index) + ": " + globalWalletModel.balance[index].toFixed(2)
                     visible: index !== globalMarketModel.baseUnit && index !== globalMarketModel.quoteUnit
                 }
             }

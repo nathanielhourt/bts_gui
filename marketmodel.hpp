@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QObject>
 #include <QStringList>
+#include <QtQml>
 
 class MarketModel : public QObject
 {
@@ -13,13 +14,12 @@ class MarketModel : public QObject
     Q_PROPERTY(QString baseUnitName READ baseUnitName NOTIFY baseUnitChanged)
     Q_PROPERTY(AssetType quoteUnit READ quoteUnit WRITE setQuoteUnit NOTIFY quoteUnitChanged)
     Q_PROPERTY(QString quoteUnitName READ quoteUnitName NOTIFY quoteUnitChanged)
+    //Band-aid to allow listing of asset names in a combo box
     Q_PROPERTY(QStringList assetNames READ assetNames NOTIFY assetNamesChanged)
 
 public:
-    enum AssetType {BTS, BTC, USD, GLD, SLV, CNY, AssetTypeCount};
+    enum AssetType {XTS, BTC, USD, GLD, SLV, CNY, AssetTypeCount};
     Q_ENUMS(AssetType)
-    const static QStringList ASSET_NAMES;
-
 
     explicit MarketModel(QObject *parent = 0);
 
@@ -29,7 +29,7 @@ public:
     }
     QString quoteUnitName() const
     {
-        return ASSET_NAMES[quoteUnit()];
+        return assetName(quoteUnit());
     }
 
     AssetType baseUnit() const
@@ -38,21 +38,26 @@ public:
     }
     QString baseUnitName() const
     {
-        return ASSET_NAMES[baseUnit()];
+        return assetName(baseUnit());
+    }
+
+    Q_INVOKABLE QString assetName(AssetType asset) const {
+        int index = metaObject()->indexOfEnumerator("AssetType");
+        QMetaEnum metaEnum = metaObject()->enumerator(index);
+        return metaEnum.valueToKey(asset);
     }
 
     QStringList assetNames() const
     {
-        return ASSET_NAMES;
+        return m_assetNames;
     }
 
 signals:
 
     void quoteUnitChanged(AssetType arg);
     void baseUnitChanged(AssetType arg);
-    // I know this looks weird... Notifying that a const static has changed
-    // I do it because QML gets nervous when it can't tell when something changes
-    void assetNamesChanged();
+
+    void assetNamesChanged(QStringList arg);
 
 public slots:
 
@@ -73,7 +78,7 @@ public slots:
             if (m_quoteUnit == baseUnit())
                 setBaseUnit(oldQuoteUnit);
 
-            qDebug() << "Quote unit becomes" << ASSET_NAMES[arg];
+            qDebug() << "Quote unit becomes" << assetName(arg);
             emit quoteUnitChanged(arg);
         }
     }
@@ -94,7 +99,7 @@ public slots:
             if (m_baseUnit == quoteUnit())
                 setQuoteUnit(oldBaseUnit);
 
-            qDebug() << "Base unit becomes" << ASSET_NAMES[arg];
+            qDebug() << "Base unit becomes" << assetName(arg);
             emit baseUnitChanged(arg);
         }
     }
@@ -102,6 +107,7 @@ public slots:
 protected:
     AssetType m_quoteUnit;
     AssetType m_baseUnit;
+    QStringList m_assetNames;
 
 };
 
