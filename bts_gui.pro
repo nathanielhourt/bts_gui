@@ -22,7 +22,8 @@ qtcAddDeployment()
 
 HEADERS += \
     marketmodel.hpp \
-    walletmodel.hpp
+    walletmodel.hpp \
+    contact.hpp
 
 OTHER_FILES += \
     qml/bts_gui/OrderPlacementTabView.qml

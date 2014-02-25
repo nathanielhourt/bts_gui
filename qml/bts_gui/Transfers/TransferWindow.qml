@@ -28,6 +28,7 @@ Window {
             text: qsTr("to")
         }
         TextField {
+            id: addressBox
             Layout.fillWidth: true
             placeholderText: qsTr("address")
         }
@@ -49,16 +50,21 @@ Window {
         }
 
         TableView {
+            id: tv
             Layout.fillHeight: true
             Layout.fillWidth: true
+            model: globalWalletModel.addressBook
+            contentFooter: Button { text: "Add!" ; width: tv.width-5}
+
+            onActivated: addressBox.text = model[row].address
 
             TableViewColumn {
-                role: "address_label"
+                role: "label"
                 title: qsTr("Label")
                 width: 100
             }
             TableViewColumn {
-                role: "address_text"
+                role: "address"
                 title: qsTr("Address")
             }
         }

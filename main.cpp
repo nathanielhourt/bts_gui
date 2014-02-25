@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<MarketModel>("io.Invictus.BitsharesX", 1, 0, "MarketModel");
     qmlRegisterType<WalletModel>("io.Invictus.BitsharesX", 1, 0, "WalletModel");
+    qmlRegisterType<Contact>("io.Invictus.BitsharesX", 1, 0, "Contact");
 
     viewer.setMainQmlFile(QStringLiteral("qml/bts_gui/main.qml"));
     viewer.show();

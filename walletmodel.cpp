@@ -4,6 +4,7 @@
 WalletModel::WalletModel(QObject *parent) :
     QObject(parent)
 {
+    addresses.append(new Contact("Hello", "World", this));
 }
 
 QList<qreal> WalletModel::balance() const
