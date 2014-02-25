@@ -23,6 +23,23 @@ ApplicationWindow {
         id: globalWalletModel
     }
 
+    menuBar: MenuBar {
+        Menu {
+            title: qsTr("File")
+
+            MenuItem {
+                text: qsTr("Import Wallet")
+                shortcut: "Ctrl+I"
+                onTriggered: console.log("NYI: Import")
+            }
+            MenuItem {
+                text: qsTr("Quit")
+                shortcut: "Ctrl+Q"
+                onTriggered: Qt.quit()
+            }
+        }
+    }
+
     ColumnLayout {
         anchors.fill: parent
 

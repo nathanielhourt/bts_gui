@@ -51,13 +51,8 @@ RowLayout {
     Column {
         spacing: 3
         Layout.preferredWidth: parent.width / 8
-        Layout.minimumWidth: Math.max(importButton.implicitWidth, transferButton.implicitWidth)
+        Layout.minimumWidth: transferButton.implicitWidth
 
-        Button {
-            id: importButton
-            text: qsTr("Import Wallet")
-            width: parent.width
-        }
         Button {
             id: transferButton
             text: qsTr("Transfer Assets")
