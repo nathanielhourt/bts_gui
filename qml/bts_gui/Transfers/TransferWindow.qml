@@ -9,32 +9,12 @@ Window {
     width: 800
     height: 300
 
-    RowLayout {
+    TransferForm {
         id: transferLayout
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.margins: 20
-
-        Label {
-            text: qsTr("Transfer")
-        }
-        TextField {
-            placeholderText: qsTr("amount")
-            validator: DoubleValidator{bottom: 0}
-            inputMethodHints: Qt.ImhFormattedNumbersOnly
-        }
-        Label {
-            text: qsTr("to")
-        }
-        TextField {
-            Layout.fillWidth: true
-            placeholderText: qsTr("address")
-        }
-        Button {
-            text: qsTr("Transfer")
-            onClicked: console.log("NYI: Transfer")
-        }
     }
 
     GridLayout {
