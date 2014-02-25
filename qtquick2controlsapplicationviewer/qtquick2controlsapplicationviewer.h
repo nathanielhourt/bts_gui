@@ -33,6 +33,7 @@ public:
 
     void setMainQmlFile(const QString &file);
     void addImportPath(const QString &path);
+    void setWindowIcon(const QIcon &icon);
     void show();
 
 private:

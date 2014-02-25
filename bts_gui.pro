@@ -1,7 +1,8 @@
 # Add more folders to ship with the application, here
-folder_01.source = qml/bts_gui
-folder_01.target = qml
-DEPLOYMENTFOLDERS = folder_01
+qml_folder.source = qml/bts_gui
+qml_folder.target = qml
+resource_folder.source = res
+DEPLOYMENTFOLDERS = qml_folder resource_folder
 
 # Additional import path used to resolve QML modules in Creator's code model
 QML_IMPORT_PATH =

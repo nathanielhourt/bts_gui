@@ -99,6 +99,15 @@ void QtQuick2ControlsApplicationViewer::addImportPath(const QString &path)
     d->engine.addImportPath(QtQuick2ApplicationViewerPrivate::adjustPath(path));
 }
 
+void QtQuick2ControlsApplicationViewer::setWindowIcon(const QIcon &icon)
+{
+    if (d->window == nullptr) {
+        qWarning("Cannot set icon before setting QML file!");
+        return;
+    }
+    d->window->setIcon(icon);
+}
+
 void QtQuick2ControlsApplicationViewer::show()
 {
     if (d->window)
