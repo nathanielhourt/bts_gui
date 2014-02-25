@@ -31,6 +31,10 @@ Window {
             Layout.fillWidth: true
             placeholderText: qsTr("address")
         }
+        Button {
+            text: qsTr("Transfer")
+            onClicked: console.log("NYI: Transfer")
+        }
     }
 
     GridLayout {
