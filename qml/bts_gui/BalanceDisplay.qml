@@ -33,16 +33,22 @@ RowLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        Row {
+        GridLayout {
             anchors.centerIn: parent
-            spacing: 30
+            width: parent.width - 40
 
             Repeater {
                 model: MarketModel.AssetTypeCount
                 delegate: Label {
-                    font.pointSize: 13
-                    text: globalMarketModel.assetName(index) + ": " + globalWalletModel.balance[index].toFixed(2)
-                    visible: index !== globalMarketModel.baseUnit && index !== globalMarketModel.quoteUnit
+                    function margin(index) {
+                        if (index !== MarketModel.XTS)
+                            return "\nMargin: " + globalWalletModel.margin[index].toFixed(2)
+                        return ""
+                    }
+
+                    font.pointSize: 11
+                    text: globalMarketModel.assetName(index) + ": " + globalWalletModel.balance[index].toFixed(2) +
+                          margin(index)
                 }
             }
         }
