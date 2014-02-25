@@ -72,10 +72,7 @@ Rectangle {
 
         Button {
             text: type === "Short"? qsTr("Cover") : qsTr("Cancel")
-        }
-        Button {
-            visible: type === "Short"
-            text: qsTr("Set Margin")
+            onClicked: console.log("NYI: Cancel/Cover")
         }
     }
 

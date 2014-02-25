@@ -57,7 +57,7 @@ RowLayout {
     Column {
         spacing: 3
         Layout.preferredWidth: parent.width / 8
-        Layout.minimumWidth: transferButton.implicitWidth
+        Layout.minimumWidth: Math.max(transferButton.implicitWidth, adjustMarginButton.implicitWidth)
 
         Button {
             id: transferButton
@@ -68,6 +68,12 @@ RowLayout {
             TransferWindow {
                 id: transferWindow
             }
+        }
+        Button {
+            id: adjustMarginButton
+            text: qsTr("Adjust Margin")
+            width: parent.width
+            onClicked: console.log("NYI: Adjust Margin")
         }
     }
 
